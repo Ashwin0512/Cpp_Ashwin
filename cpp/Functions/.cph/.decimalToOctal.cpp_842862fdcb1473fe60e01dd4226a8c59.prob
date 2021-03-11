@@ -1,0 +1,1 @@
+{"name":"Local: decimalToOctal","url":"c:\\cpp\\Functions\\decimalToOctal.cpp","tests":[{"id":1614008727174,"input":"43468","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\cpp\\Functions\\decimalToOctal.cpp","group":"local","local":true}
