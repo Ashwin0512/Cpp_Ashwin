@@ -21,7 +21,7 @@ void maxTilli(int array[], int n)   {
 }
 
 int main()  {
-    cout<<"Enter number of elements in array : ";
+    cout<<"Enter number of elements in the array : ";
     int n;
     cin>>n;
 
