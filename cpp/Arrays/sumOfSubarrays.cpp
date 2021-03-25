@@ -1,20 +1,22 @@
 #include<iostream>
 using namespace std;
 
-int sumOfSubarray(int array[] , int n)    {
-    
-}
-
 int main()  {
     cout<<"Enter number of elements in array : ";
     int n;
     cin>>n;
 
-    int array[n];
-                                                                                                                                                                                                                                                                                                                                                                                                                                  
+    int arr[n];
+
     for(int i=0; i<n; i++)  {
-        cin>>array[i];
+        cin>>arr[i];
     }
 
-    cout<<"Sum of all subarrays is : "<<sumOfSubarray(array,n);
+    for(int i=0; i<n; i++)  {
+        int curr=0;
+        for(int j=i ; j<n ; j++)    {
+            curr += arr[j];
+            cout << curr << endl;
+        }
+    }
 }
