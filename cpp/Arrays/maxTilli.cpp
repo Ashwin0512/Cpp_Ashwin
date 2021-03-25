@@ -5,18 +5,11 @@ using namespace std;
 void maxTilli(int array[], int n)   {
     
     int newArray[n];
-    int max = INT_MIN;
+    int mx=INT_MIN;
 
-    for(int i=1; i<=n; i++)  {
-        for(int j=0; j<i; j++)  {
-            if (array[j]>max) 
-                max=array[j];
-        }
-        newArray[i-1]=max;
-    }
-
-    for(int i=0; i<n; i++)  {
-        cout<<newArray[i]<<" ";
+    for(int i=0; i<n ; i++) {
+        mx = max(mx,array[i]);
+        cout<<mx<<" ";
     }
 }
 
