@@ -6,17 +6,18 @@ int main()  {
     int n;
     cin>>n;
 
-    int arr[n];
+    int array[n];
 
     for(int i=0; i<n; i++)  {
-        cin>>arr[i];
+        cin>>array[i];
     }
 
-    for(int i=0; i<n; i++)  {
-        int curr=0;
+    for(int i=0 ; i<n ; i++)    {
+        
+        int sum = 0;
         for(int j=i ; j<n ; j++)    {
-            curr += arr[j];
-            cout << curr << endl;
+            sum += array[j];
+            cout<<sum<<endl;
         }
     }
 }

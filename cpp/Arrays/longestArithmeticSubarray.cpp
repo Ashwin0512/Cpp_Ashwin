@@ -1,25 +1,23 @@
 #include<iostream>
 using namespace std;
 
-int length(int array[], int n)  {
-    
-    int curDif = array[0] - array[1];
-    int curLength=2;
-    int ans=2;
+int longestSubarray(int array[] , int n)    {
+    int length=2;
+    int curLength = 2;
+    int dif=array[2]-array[1];
 
-    for(int i=2 ; i<n ; i++)    {
-        if(array[i]-array[i-1] == curDif)   {
-            curLength++;
+    for(int i=0; i<n-1; i++)    {
+        if(array[i+1] - array[i] == dif)    {
+            length++;
+            if(length>curLength)    {
+            curLength = length;
+            }
         }   else    {
-            curDif = array[i]-array[i-1];
-            curLength=2;
-        }
-
-        if(curLength>ans)   {
-            ans = curLength;
-        }
+            dif = array[i+1]-array[i];
+            length=2;
+        }        
     }
-    return ans;
+    return curLength;
 }
 
 int main()  {
@@ -33,5 +31,5 @@ int main()  {
         cin>>array[i];
     }
 
-    cout<<length(array,n);
+    cout<<"Length of longest subarray is : "<<longestSubarray(array,n);
 }
