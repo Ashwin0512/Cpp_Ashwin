@@ -1,18 +1,32 @@
 #include<iostream>
+#include<climits>
 using namespace std;
 
-int firstRepeating(int array[], int n)  {
-    int i;
-    for(i=0; i<n; i++)  {
-        for(int j=i+1 ; j<n ; j++)    {
-            if(array[i]==array[j])  {
-                return i+1;
-                break;
-            }
+int firstRepeat(int arr[], int n)   {
+    const int N = 10e7+5;
+
+    int idx[N];
+    for(int i=0; i<N; i++)  {
+        idx[i]=-1;
+    }
+    
+    int minidx = INT_MAX;
+
+    for(int i=0; i<n; i++)  {
+
+        if(idx[arr[i] != -1])   {
+            minidx = min(minidx , idx[arr[i]]);
+        }   else    {
+            idx[arr[i]] = i;
         }
     }
 
-    return -1;
+    if(minidx == INT_MAX)   {
+        return -1;
+    }   else    {
+        return minidx+1;
+    }
+    
 }
 
 int main()  {
@@ -20,11 +34,11 @@ int main()  {
     int n;
     cin>>n;
 
-    int array[n];
+    int arr[n];
 
-    for(int i=0; i<n; i++)  {
-        cin>>array[i];
+    for(int j=0; j<n; j++)  {
+        cin>>arr[j];
     }
-
-    cout<<firstRepeating(array,n);
+    
+    firstRepeat(arr,n);
 }
