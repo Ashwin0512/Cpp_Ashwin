@@ -1,47 +1,34 @@
 #include<iostream>
 using namespace std;
+ 
+void givenSum(int arr[] , int n, int s)    {
 
-void subarray(int array[] , int n, int s)  {
-    int i, j=i;
-    for(i=0; i<n; i++)  {
-        int sum=0, start=-1, end=-1;
-        while((sum<s) && (j<n))    {
-            sum += array[j];
-            j++;
+    for(int i=0; i<n; i++)  {
+        int sum = 0;
+        for(int j=i ; j<n ; j++)    {
+            sum += arr[j];
 
-            if(sum == s)   {
-                start=i;
-                end=j;
-                break;
+            if(sum == s)    {
+                cout<< i+1 <<" "<< j+1 <<endl;
             }
         }
     }
-
-    int b=j-i+1;
-    int arr[b];
-    for(int k=0 ; k<b ; k++)    {
-        arr[k]=array[i+k];
-    }
-
-    for(int k=0 ; k<b ; k++)    {
-        cout<<arr[k]<<" ";
-    }
-}   
+}
 
 int main()  {
     cout<<"Enter number of elements in array : ";
     int n;
     cin>>n;
 
-    int array[n];
+    int arr[n];
 
     for(int i=0; i<n; i++)  {
-        cin>>array[i];
+        cin>>arr[i];
     }
 
-    cout<<"Enter required sum : ";
     int s;
+    cout<<"Enter the required sum of subarray : ";
     cin>>s;
 
-    subarray(array,n,s);
+    givenSum(arr,n,s);
 }
