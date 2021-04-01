@@ -9,7 +9,7 @@ int kadaneAlgo(int arr[], int n)    {
     for(int i=0; i<n; i++)  {
         if(curSum + arr[i] >= 0) {
             curSum += arr[i];
-        }   else if(curSum + arr[i]) {
+        }   else  {
             curSum = 0;
         }
 
