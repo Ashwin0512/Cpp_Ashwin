@@ -2,7 +2,7 @@
 using namespace std;
 
 int main()  {
-    cout<<"Specify the order of matrix : ";
+    cout<<"Specify the order of the matrix : ";
     int n;
     cin>>n;
 
