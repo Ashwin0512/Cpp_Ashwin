@@ -8,10 +8,6 @@ int main()  {
     cout<<"Enter number of columns : ";
     cin>>m;
 
-    int num;
-    cout<<"Enter number to be searched for in the matrix : ";
-    cin>>num;
-
     int arr[n][m];
     for(int i=0; i<n; i++)  {
         for(int j=0; j<m; j++)  {
@@ -19,21 +15,22 @@ int main()  {
         }
     }
 
-    bool found=false;
-    int r=0, c=m-1;
-    while(r<m && c>=0)  {
-        if(arr[r][m] == num)    {
-            found=true;
-        } else if(arr[r][m] > num)    {
-            c--;
-        }   else    {
-            r++;
-        }
-    }  
+    int num;
+    cout<<"Enter number to be searched for in the matrix : ";
+    cin>>num;
 
+    bool found=false;
+    int r=0, c=n-1;
+    while(r<m && c>=0)  {
+        if(arr[r][c] == num)    {
+            found=true;
+        } 
+        arr[r][c] > num ? c-- : r++;
+    }  
+ 
     if(found)   {
-        cout<<"FOUND";
+        cout<<"FOUND \n";
     }   else    {
-        cout<<"NOT FOUND";
+        cout<<"NOT FOUND \n";
     }
 }
