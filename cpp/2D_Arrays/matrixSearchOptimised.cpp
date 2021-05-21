@@ -20,8 +20,9 @@ int main()  {
     cin>>num;
 
     bool found=false;
-    int r=0, c=n-1;
-    while(r<m && c>=0)  {
+    int r=0, c=m-1;
+    cout<<arr[r][c]<<endl;
+    while(r<n && c>=0)  {
         if(arr[r][c] == num)    {
             found=true;
         } 

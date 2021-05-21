@@ -29,4 +29,5 @@ int main()  {
     }
 
     selectionSort(array,n);
+    
 }
