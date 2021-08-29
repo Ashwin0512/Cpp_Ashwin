@@ -30,18 +30,18 @@ bool Account::withdraw(double amount)   {
     }
 }
 
-Account::Account(string name)   {
+Account::Account(string n) : name{n}, balance{0}  {
     cout<<"String arg constructor called"<<endl;
 }
 
-Account::Account(double balance)    {
+Account::Account(double b) : name{"None"}, balance{b}   {
     cout<<"double arg constructor called"<<endl;
 }
 
-Account::Account(string name, double balance)   {
+Account::Account(string n, double b) : name{n}, balance{b}  {
     cout<<"two args constructor called"<<endl;
 }
 
-Account::~Account() {
+Account::~Account() { 
     cout<<"destructor called for "<<name<<endl;
 }

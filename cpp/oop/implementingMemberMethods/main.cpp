@@ -1,4 +1,5 @@
 #include "Account.h"
+#include "Player.h"
 #include <iostream>
 using namespace std;
 
@@ -13,4 +14,12 @@ int main()
     cout << ashwin_account.get_balance() << endl;
     ashwin_account.withdraw(2000);
     cout << ashwin_account.get_balance() << endl;
+
+    Account nehal_account("nehal",10000000);
+    cout<<nehal_account.get_balance()<<"\n";
+
+    cout<<"--------------------***************-------------------\n";
+
+    Player shreya("shreya101",100,10);
+
 }

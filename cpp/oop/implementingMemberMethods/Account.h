@@ -27,13 +27,13 @@ public:
     // // DESTRUCTOR CALLED
     // ~Account();
 
-    Account()   {
-        std::cout<<"No args constructor called"<<std::endl;
+    Account() : name{"None"}, balance{0}  {
+        std::cout<<"No args constructor called"<<std::endl;   
     }
     Account(std::string name);
     Account(double balance);
     Account(std::string name, double balance);
     ~Account();
 };
-
+ 
 #endif
